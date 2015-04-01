@@ -43,6 +43,27 @@ public class DrawingPanel extends JPanel {
 		// TODO Draw on the panel here
 	}
 
-	
+	private class controlsHandler implements ControlListener {
+
+		@Override
+		public void setFont(boolean bold, boolean italics, boolean underlined) {
+			font = new Font("Sans Serif",Font.BOLD,16);
+			
+		}
+
+		@Override
+		public void setShape(int shape) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void setNumber(double num) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+
 	
 }
