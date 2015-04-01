@@ -1,21 +1,23 @@
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontMetrics;
 import java.awt.Graphics;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
-public class DrawingPanel extends JPanel{
+public class DrawingPanel extends JPanel {
 	// TODO Your Instance Variables Here
 
-	final int absoluteHeight, absoluteWidth;
+	final int absoluteWidth;
+	Font font;
 	
 	public DrawingPanel() {
 		super();
 		setBackground(Color.WHITE);
-		absoluteHeight = getHeight();
-		absoluteWidth = getWidth();
-		// TODO Add GUI customizations to the panel
+		absoluteWidth = 640;
+		font = new Font("Sans Serif",Font.BOLD,16);
 	}
 
 	public void paintComponent(Graphics g) {
@@ -23,11 +25,24 @@ public class DrawingPanel extends JPanel{
 									// to paint the background
 
 		int width = getWidth();
-		int height = getHeight();
+		double scale = (double)width/absoluteWidth;
 		
-		g.drawLine()
+		g.setColor(Color.CYAN);
+		g.fillRect((int)(64 * scale), 95, (int)((absoluteWidth - 128)*scale), 10);
+		g.setColor(Color.BLACK);
+		g.drawLine((int)(64 * scale), 100, (int)((absoluteWidth - 64)*scale), 100);
+		g.setFont(font);
+		FontMetrics fm = g.getFontMetrics();
+		
+		for (int i = 0; i <= 10; i++) {
+			g.drawLine((int)((64 + (int)(51.2*i)) * scale), 90, (int)((64 + (int)(51.2*i)) * scale), 110);
+			width = fm.stringWidth(i*10 + "");
+			g.drawString(i*10 + "", (int)((64 + (int)(51.2*i)) * scale) - width/2, 70);
+		}
 		
 		// TODO Draw on the panel here
 	}
 
+	
+	
 }

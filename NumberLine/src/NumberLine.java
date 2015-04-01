@@ -8,8 +8,7 @@ public class NumberLine {
 	// 2) Customize the JFrame by writing a class that extends it, then creating
 	// that type of object in your main method instead
 	public static void main(String[] args) {
-		JFrame w = new JFrame("Simple Window");
-		
-		w.setVisible(true);
+		NumberLineFrame frame = new NumberLineFrame();
+		frame.setVisible(true);
 	}
 }
