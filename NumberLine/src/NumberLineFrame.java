@@ -16,6 +16,7 @@ public class NumberLineFrame extends JFrame {
 		
 		DrawingPanel panel = new DrawingPanel();
 		WidgetPanel controls = new WidgetPanel();
+		controls.setControlListener(panel);
 		
 		add(panel, BorderLayout.CENTER);
 		add(controls, BorderLayout.SOUTH);

@@ -1,2 +1,6 @@
 /ControlListener.class
 /DrawingPanel$controlsHandler.class
+/WidgetPanel$CheckBoxHandler.class
+/WidgetPanel$SliderHandler.class
+/WidgetPanel$RadioButton.class
+/WidgetPanel$RadioButtonHandler.class
