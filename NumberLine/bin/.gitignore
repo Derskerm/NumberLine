@@ -1,5 +1,6 @@
-/NumberLine.class
-/DrawingPanel.class
-/NumberLineFrame.class
-/WidgetPanel.class
-/SimpleWindow.class
+/ControlListener.class
+/DrawingPanel$controlsHandler.class
+/WidgetPanel$CheckBoxHandler.class
+/WidgetPanel$SliderHandler.class
+/WidgetPanel$RadioButton.class
+/WidgetPanel$RadioButtonHandler.class
